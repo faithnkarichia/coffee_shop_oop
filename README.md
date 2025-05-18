@@ -24,6 +24,8 @@ coffee_shop/
 ```
 ## Github link
 
+[https://github.com/faithnkarichia/coffee_shop_oop](https://github.com/faithnkarichia/coffee_shop_oop)
+
 
 
 ## KEY CONCEPTS
