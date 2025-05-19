@@ -19,21 +19,33 @@ def main():
     john.create_order(latte, 8.0)
     john.create_order(espresso, 7.0)
 
-    # Test: Orders for latte
-    print("Orders for Latte:")
+    # orders for a customer
+    print("\nOrders for Faith:")
+    for order in faith.orders():
+        print(f"{order.coffee._coffee_name} at Ksh {order.price}")
+
+
+    print("\nUnique coffee list for Faith:")
+    for coffee in faith.coffees():
+        print(coffee._coffee_name)
+
+
+
+    #  Orders for latte
+    print("\nOrders for Latte:")
     for order in latte.orders():
         print(f"{order.customer._customer_name} paid {order.price}")
 
     # Customers who ordered latte
     print("\nCustomers who ordered Latte:")
-    for cust in latte.customers():
-        print(cust._customer_name)
+    for customer in latte.customers():
+        print(customer._customer_name)
 
     # Number of orders
     print(f"\nTotal Latte orders: {latte.num_orders()}")
 
     # Average price
-    print(f"Average price for Latte: {latte.average_price()}")
+    print(f"Average price for Latte: {latte.average_price():.2f}")
 
     # Most aficionado
     top_customer = Customer.most_aficionado(latte)
